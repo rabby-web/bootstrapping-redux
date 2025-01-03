@@ -1,11 +1,28 @@
+import Login from "@/pages/login";
 import App from "../App";
 
 import { createBrowserRouter } from "react-router-dom";
+import Tasks from "@/pages/tasks";
+import User from "@/pages/User";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <Tasks />,
+      },
+      {
+        path: "users",
+        element: <User />,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 
