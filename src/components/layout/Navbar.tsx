@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import myImage from "../../assets/ss.jpg";
+import { ModeToggle } from "../mode-toggle";
 
 const Navbar = () => {
   return (
@@ -13,6 +14,8 @@ const Navbar = () => {
         <span className="font-bold">Task Master</span>
         <Link to="/">Tasks</Link>
         <Link to="/users">Users</Link>
+        <div className="ml-auto"></div>
+        <ModeToggle></ModeToggle>
       </div>
     </nav>
   );
